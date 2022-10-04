@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
+class MyPotraitWidget extends StatefulWidget {
+  MyPotraitWidget({Key? key, required this.height, required this.width})
+      : super(key: key);
+  double height;
+  double width;
+
+  @override
+  State<MyPotraitWidget> createState() => _MyPotraitWidgetState();
+}
+
+class _MyPotraitWidgetState extends State<MyPotraitWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.grey,
+      height: widget.height / 2,
+      width: widget.width / 2,
+      child: Text('this is the potrait widget'),
+    );
+  }
+}

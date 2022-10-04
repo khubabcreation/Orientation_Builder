@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
+class MyLandScapWidget extends StatefulWidget {
+  MyLandScapWidget({Key? key, required this.height, required this.width})
+      : super(key: key);
+  double height;
+  double width;
+  @override
+  State<MyLandScapWidget> createState() => _MyLandscapWidgetState();
+}
+
+class _MyLandscapWidgetState extends State<MyLandScapWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.green,
+      child: Text('This is the landscap widget'),
+      height: widget.height / 2,
+      width: widget.width / 2,
+    );
+  }
+}
